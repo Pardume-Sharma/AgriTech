@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Prototype | Login </title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            background-color: rgba(212, 212, 212, 0.192);
+            margin: 50px auto;
+            width: max-content;
+            height: 515px;
+            border-radius: 20px;
+        }
+
+        input{
+            /* background-color: rgb(71, 71, 71); */
+            color: white;
+            border: 2px solid rgb(71, 71, 71);
+            outline: none;
+            font-size: 14px;
+            padding: 8px;
+            width: 30vw;
+            border-radius: 5px;
+            margin: 8px 0px;
+        }
+
+        .inputData{
+            margin: 6px;
+        }
+
+        .imageContainer img{
+            width: 400px;
+            border-radius: 20px 0px 0px 20px;
+        }
+
+        .loginContainer{
+            width: max-content;
+            padding: 10px;
+        }
+
+        label, h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        label{
+            font-size: 18px;
+        }
+
+        button{
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: rgb(11, 123, 15);
+            color: white;
+        }
+
+        button:hover{
+            transition: .3s ease-in-out;
+            background-color: rgb(0, 0, 0);
+        }
+
+        button:active{
+            transition: .1s ease-out;
+            background-color: rgb(37, 37, 37);
+        }
+
+        h1{
+            text-align: center;
+            margin: 40px;
+        }
+
+        .error{
+            color: rgba(255, 0, 0, 0.815);
+            height: 14px;
+        }
+
+        center p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        center a{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="">Projects</a>
+                <a href="">Blog</a>
+                <a href="">FAQ</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="nav">
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="imageContainer">
+            <img src="Media/SideImage.jpg" alt="">
+        </div>
+        <div class="loginContainer">
+            <h1>Login</h1>
+            <div class="inputData">
+                <label for="name">Email: </label><br>
+                <input type="text" id="email" placeholder="Enter your Email/Username"><br>
+                <div class="error">
+                    <span id="emailError"></span>
+                </div>
+            </div>
+            <div class="inputData">
+                <label for="pass">Password: </label><br>
+                <input type="password" id="pass" placeholder="Enter your Password">
+                <div class="error">
+                    <span id="passError"></span>
+                </div>
+            </div><br>
+            <center>
+                <button onclick="login()">Login</button><br><br>
+                <p>Don't have account? <a href="register.html">Sign Up</a></p>
+            </center>
+        </div>
+    </div>  
+    <script>
+        var email = document.getElementById("email")
+        var pass = document.getElementById("pass")
+
+        function login() {
+            reset()
+            data = localStorage.getItem("users")
+            data = JSON.parse(data)
+
+            var emailError = true
+            var passError = true
+            
+            for(let i=0;i<data.length;i++){
+                if(data[i]['email'] == email.value || data[i]['username'] == email.value){
+                    emailError = false
+                    console.log("Email Verified!")
+                    if(data[i]['pass'] == pass.value){
+                        passError = false
+                        console.log("Password Verified!")
+                        localStorage.setItem("loggedIn",data[i]['username'])
+                        window.location.assign('index.html')
+                    }
+                    break
+                }
+            }
+
+            if(emailError){
+                email.style.border = "2px solid rgb(255,0,0)"
+            }
+            if(passError){
+                pass.style.border = "2px solid rgb(255,0,0)"
+            }
+
+        }
+
+        function reset(){
+            email.style.border = "2px solid rgb(71, 71, 71)"
+            pass.style.border = "2px solid rgb(71, 71, 71)"
+        }
+    </script>
+</body>
+</html>

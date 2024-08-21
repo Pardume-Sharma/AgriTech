@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech | Precision Farming Revolution </title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="agritech.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</head>
+<body oncontextmenu="return false">
+    <div class="header">
+
+        <header class="header-content">
+
+            <a href="#logo" class="logo">
+                <img src="logo.png" alt="logoImage" class="logo-icon" />
+                <span class="logo-text">AgriTech</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#pricing" class="nav-link">Feedback</a>
+                <div id="mode" class="fas fa-sun"></div>
+            </nav>
+            <a href="login.html" class="contact-button">
+                Login/Signup
+            </a>
+            
+            <button type="button" class="menu-button">
+                <!-- <div id="toggle-btn" class="fas fa-sun"></div> -->
+                <img src="./images/Hamburger.svg" alt="menuButton" onclick="toggleDropdown()" id="dropdown" class="menu-icon" />
+            </button>
+
+        </header>
+
+    </div>
+
+    <div class="content">
+        <section class="main-section">
+
+            <div class="content-left">
+                <h1 class="section-title">Precision Farming Revolution: Smart Sensor Technology </h1>
+                <p class="section-description">
+                    Welcome to the future of agriculture! Our cutting-edge sensor technology empowers farmers with real-time insights to predict and optimize the levels of essential nutrients. Embrace the evolution of farming with our advanced agricultural technology, paving the way for smarter, more efficient farming practices.
+                </p>
+                <div class="button-group">
+                    <a href="graph/index.html" class="start-button">Start Now</a>
+                </div>
+            </div>
+            
+            <div class="content-right">
+                <div class="image-container" id="img-slider">
+                    <img src="./images/hero-img.png" alt="sectionImage" class="section-image" />
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <div class="feature-container" id="features">
+        <div class="feature-content">
+            <div class="main-info">
+                <h2 class="main-title">
+                    Our competitive advantage
+                </h2>
+                <p class="main-description">
+                    This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of real written text but is random or otherwise generated.
+                </p>
+            </div>
+            
+            <div class="feature-grid">
+                <!-- card 1 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="./images/PersonalizedLearn.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Personalized 
+                        </div>
+                        <div class="feature-description">
+                            Offer tailored learning experiences through AI and machine learning to cater to individual student needs.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="./images/Affordability.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Affordability
+                        </div>
+                        <div class="feature-description">
+                            Provide high-quality technology at an affordable price point, making it accessible to a broader audience.
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="./images/InnovativeTech.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Innovative Technology
+                        </div>
+                        <div class="feature-description">
+                            Utilize cutting-edge technology, such as augmented reality and highly advanced tools, to create immersive experiences.
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="./images/Analytics.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Analytics and Insights
+                        </div>
+                        <div class="feature-description">
+                            Offer detailed analysis to help farmers and others to monitor performance and make data-driven decisions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="newsletter">
+         
+    <form action="https://api.web3forms.com/submit" method="POST">
+    
+        <h3>Feedback Form</h3>
+        <input type="hidden" name="access_key" value="ac691ca3-9abd-45a3-a2a5-1c39bfe387f2">
+
+        <!-- <input type="hidden" name="access_key" value="ac691ca3-9abd-45a3-a2a5-1c39bfe387f2"> -->
+    
+        <input type="text" name="name" class="box" placeholder="Enter your Name" required>
+        <input type="email" name="email" class="box" placeholder="Enter your email" required>
+        <textarea name="message" class="box" placeholder="Give your Feedback " required></textarea>
+        <div class="h-captcha" data-captcha="true"></div>
+        <p id="thanks"></p>
+        <button type="submit" class="news-btn" onclick="thanks()">Submit</button>
+    </form>
+        <!-- <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="text" name="name" placeholder="Enter your Name" class="box" required>
+            <input type="email" name="email" placeholder="Enter your email" id="" class="box" required>
+            <textarea name="message" id="" cols="22" rows="5" class="box" placeholder="Give your feedback here" required></textarea>
+            <div class="h-captcha" data-captcha="true"></div>
+            <input type="submit" value="Subscribe" class="news-btn" onclick="thanks()">
+        </form> -->
+
+    </section>
+
+    <div class="footer-container" id="ftr">
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <div class="comp-logo">
+                    <a class="logo-link" href="#">
+                        <img class="logo-svg" src="logo.png"/>
+                        AgriTech
+                    </a>
+                </div>
+                <p class="filler-text">Precision Farming Revolution</p>
+                <div class="social">
+                        <a class="social-link" href="#">
+                            <img src="./images/instagram.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./images/linkedin.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./images/Microsoft.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="./images/twitter.svg" class="social-icon" />
+                        </a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Products
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#features" class="footer-link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard.html" class="footer-link">Solutions</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 2 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Company
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#" class="footer-link">AgriTech</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.chitkara.edu.in" class="footer-link">Chitkara</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 3 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Support
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="tel:+7973789157" class="footer-link">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:pardume638.be22@chitkara.edu.in" class="footer-link">Mail Us</a>
+                                </li>
+                            </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-copyright">
+            © 2023 - Present AgriTech. All rights reserved.
+        </div>
+    </div>
+</body>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script src="script.js"></script>
+</html>

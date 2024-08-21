@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "side header"
+    "side main";
+}
+
+/* HEADER */
+.header {
+  background-color: rgba(96, 40, 239, 0.906);
+  grid-area: header;
+  padding: 10px;
+  color: rgb(247, 247, 248);
+  font-size: 30px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: gainsboro;
+  font-size: 30px;
+  padding: 5px;
+  grid-area: side;
+}
+
+.main {
+  background-color: rgba(202, 189, 189, 0.708);
+  padding: 25px;
+}
+
+.card {
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.card{
+  height: 250px;
+  width: 250px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.GraphArea{
+  background-color: #52535473;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.Nitrogen{
+  background-image: linear-gradient(to bottom right, #90f7ec, #32ccbc);
+  box-shadow: 3px 3px rgba(211, 202, 202, 0.397);
+  place-items: center;
+}
+
+.Nitrogen-value{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+.Nitrogen-progress {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #eef3f3;
+  display: grid;
+  place-items: center;
+}
+
+.Nitrogen-progress:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #807471, #f8cff346);
+  background-color: black;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.Nitrogen-value{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+.Phosphorus{
+  background-image: linear-gradient(to bottom right, #ce9ffc, #7367f0);
+  box-shadow: 3px 3px rgba(147, 99, 183, 0.397);
+  place-items: center;
+}
+
+.Phosphorus{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+.Phosphorus-progress {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #eef3f3;
+  display: grid;
+  place-items: center;
+}
+
+.Phosphorus-progress:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #807471, #f8cff346);
+  background-color: black;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.Phosphorus-value{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+.Potassium {
+  background-image: linear-gradient(to bottom right, #feb692, #ea5455);
+  box-shadow: 3px 3px rgba(184, 192, 182, 0.397);
+  place-items: center;
+}
+
+.Potassium-progress {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #eef3f3;
+  display: grid;
+  place-items: center;
+}
+
+.Potassium-progress:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #807471, #f8cff346);
+  background-color: black;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.Potassium-value{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+.Moisture {
+  background-image: linear-gradient(to bottom right, #abcdef, #0396ff);
+  box-shadow: 3px 3px rgba(111, 197, 212, 0.397);
+  place-items: center;
+}
+
+.Moisture-progress {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #eef3f3;
+  display: grid;
+  place-items: center;
+}
+
+.Moisture-progress:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #807471, #f8cff346);
+  background-color: black;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.Moisture-value{
+  position: relative;
+  font-family: "Poppins",sans-serif;
+  font:bold;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1032px){
+  section{
+    display: none;
+  }
+
+  body{
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .cards{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 616px){
+  section{
+    display: none;
+  }
+
+  body{
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .cards{
+    grid-template-columns: auto;
+  }
+}
